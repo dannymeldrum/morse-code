@@ -1,0 +1,33 @@
+
+.btn {
+	font-family: $header-font-family;
+  	line-height: $header-line-height;
+	background-color: $grey-color;
+	color: $gold-color;
+	margin: 0 30px 0 0;
+	padding: 10px 24px;
+	transition: all 0.4s ease 0s;
+	appearance: none;
+	border: none;
+	text-underline: none;
+	font-size: 30px;
+
+	&:hover, &:focus {		
+		background-color: $gold-color;
+		color: $grey-color;
+	}
+
+	&--submit {
+		.complete & {
+			display: none;
+		}
+	}
+
+	&--social {
+		display: none;
+
+		.complete & {
+			display: inline-block;
+		}
+	}
+}

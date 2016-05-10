@@ -1,0 +1,50 @@
+/*
+* Columns: Declaring number of columns to use when using when creating a container context
+* e.g. @include container($columns-small)
+*/
+$columns-tiny:    4;
+$columns-small:   6;
+$columns-medium:  9;
+$columns-large:  12;
+$columns-huge:   12;
+
+/*
+* Breakpoints: Media query sizes
+* e.g.   @include media("<small") {
+*          @include container($columns-tiny);
+*        }
+*/
+$breakpoints: (
+  tiny: 320px,
+  small: 480px,
+  medium: 720px,
+  large: 800px,
+  huge: 800px
+);
+
+/*
+* Primary container settings
+* Set the outter site gutters and max container size
+*/
+$primary-container-max-width: 800px;
+$primary-container-gutter-tiny:   10px; //20px;
+$primary-container-gutter-small:  10px; //40px;
+$primary-container-gutter-medium: 20px; //60px;
+$primary-container-gutter-large:  30px;//80px;
+$primary-container-gutter-huge:   40px; //100px;
+
+/*
+* Susy config
+*/
+$gutter-width: 30px;
+$column-width: 80px;
+
+$susy: (
+  columns: $columns-tiny,
+  gutters: $gutter-width/$column-width,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  global-box-sizing: border-box,
+  use-custom: (rem: true)
+);

@@ -1,0 +1,54 @@
+/*
+* Form styles extending from the base/forms.scss
+*/
+
+
+.form-item {
+	border-top: 8px solid $grey-color;
+	border-bottom: 8px solid $grey-color;
+	margin-bottom: 2em;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+
+	textarea {
+
+	    @include media(">=medium", "<large") {
+	        @include span(4.5 of $columns-medium 0);
+	    }
+
+	    @include media(">large") {
+	        @include span(10 of $columns-large 0);
+	    }
+	}
+}
+
+
+.close {
+	position: absolute;
+	right: 32px; top: 32px;
+	width: 60px; height: 60px;
+	opacity: 0.3;
+	text-indent: -2000em;
+	transition: all 0.4s ease 0s;
+
+	&:hover, &:focus {
+  		opacity: 1;
+	}
+
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		left: 15px;
+		height: 60px; width: 2px;
+		background-color: $grey-color;
+	}
+	
+	&:before {
+  		transform: rotate(45deg);
+	}
+
+	&:after {
+  		transform: rotate(-45deg);
+	}
+}

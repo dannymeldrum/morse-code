@@ -1,0 +1,31 @@
+body:before {
+  content: "Tiny";
+  position: fixed;
+  z-index:10;
+  bottom: 0;
+  left:0;
+  padding: 4px 6px;
+  text-transform: capitalize;
+  background-color: darken(#28a0a8, 10%);
+  font-size: 11px;
+  color:$white-color;
+
+  @include media(">=small") {
+    content: "Small";
+  }
+  @include media(">=medium") {
+    content: "Medium";
+  }
+  @include media(">=large") {
+    content: "Large";
+  }
+  @include media(">=huge") {
+    content: "Huge";
+  }
+}
+
+
+// Removed the susy grid background
+.no-debug-background {
+	background:transparent!important;
+}

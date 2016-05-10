@@ -1,0 +1,24 @@
+.docs {
+  margin-bottom:$base-spacing;
+  padding: 30px;
+  background-color:rgba(#e1e1e1, 0.7);
+}
+
+// Sprite test
+
+.sprite-test {
+	display:inline-block;
+	margin-right: 20px;
+}
+.twitter-sprite-test {
+	@extend .sprite-icon-twitter;
+	@extend .sprite-icon-twitter-dims;
+}
+.facebook-sprite-test {
+	@extend .sprite-icon-facebook;
+	@extend .sprite-icon-facebook-dims;
+}
+.instagram-sprite-test {
+	@extend .sprite-icon-instagram;
+	@extend .sprite-icon-instagram-dims;
+}

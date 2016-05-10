@@ -1,0 +1,102 @@
+
+@font-face {
+  font-family: 'bebasneue';
+  src: url('../fonts/bebasneue/bebasneue-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/bebasneue/bebasneue-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/bebasneue/bebasneue-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/bebasneue/bebasneue-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/bebasneue/bebasneue-webfont.svg#bebasneue-webfont') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto-bold';
+  src: url('../fonts/roboto/roboto-bold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/roboto/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto/roboto-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/roboto/roboto-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto/roboto-bold-webfont.svg#roboto-bold-webfont') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/*
+* Font Families
+*/
+$base-font-family:  	'roboto-bold';
+$header-font-family: 	'bebasneue';
+
+/*
+* Font Sizes
+*/
+$modular-scale: 1.5;
+$browser-default-font-size: 	16rem; //!Dont change.
+$base-font-size: 							16rem;
+$h6-font-size: 								$base-font-size;
+$h5-font-size: 								$base-font-size;
+$h4-font-size: 								floor($base-font-size * $modular-scale);
+$h3-font-size: 								floor($h4-font-size * $modular-scale);
+$h2-font-size: 								floor($h3-font-size * $modular-scale);
+$h1-font-size: 								floor($h2-font-size * $modular-scale);
+
+
+/*
+* Line Heights
+*/
+$base-line-height: 		28 / 16;  // Photoshop leading 26, font-size 16px;
+$header-line-height: 	1.3;			// A consistant ratio for heading line-heights
+
+/*
+* Spacings
+*/
+$base-spacing: 24px;
+
+/*
+* Z-index levels
+*/
+$alpha-z-index: 	0;
+$beta-z-index: 		10;
+$gamma-z-index: 	100;
+$zeta-z-index: 		1000;
+
+/*
+* Borders
+*/
+$base-border-radius: 	0px;
+$base-border-color:		#333;
+
+/*
+* Colours
+*/
+$black-color: 			#000;
+$white-color: 			#fff;
+$grey-color: 			#4b4b4b;
+$gold-color:			#f6c500;
+
+$facebook-color:		#365397;
+$twitter-color:		 	#00a9f1;
+$linkedin-color:		#006db3;
+$google-color:			#4285f4;
+$google-plus-color:	#e0452c;
+$youtube-color:			#ff3333;
+$vimeo-color:				#48b6ed;
+$pinterest-color:		#ce1a19;
+$instagram-color:		#396d9a;
+
+/*
+* Typographic variables
+*/
+$base-font-color: 			$grey-color;
+$base-link-color: 			$gold-color;
+$base-link-hover-color:	darken($base-link-color, 10%);
+$alt-link-color:				#fff;
+$alt-link-hover-color: 	#202b32;
+
+// Transitions
+$base-transition-speed: 0.3s;
+
+// Borders
+$base-border-radius: 		8px;

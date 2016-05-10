@@ -1,0 +1,63 @@
+*,
+*:after,
+*:before {
+    box-sizing:border-box;
+    word-wrap:break-word;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(../img/raster/background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+/*
+ * The global primary container
+ * Will restrict width - resuse everytime you want to lock content into the grid.
+ */
+ .primary-container {
+  border-color:transparent;
+  border-style: solid;
+  border-top-width:0;
+  border-bottom-width:0;
+  border-left-width:$primary-container-gutter-tiny;
+  border-right-width:$primary-container-gutter-tiny;
+  @include container($primary-container-max-width);
+
+    top: 50%;
+    position: relative;
+    height: 580px;
+    margin-top: -290px;
+
+
+  @include media(">=small", "<medium") {
+    @include show-grid($columns-small);
+    border-left-width:$primary-container-gutter-small;
+    border-right-width:$primary-container-gutter-small;
+  }
+
+  @include media(">=medium", "<large") {
+    @include show-grid($columns-medium);
+    border-left-width:$primary-container-gutter-medium;
+    border-right-width:$primary-container-gutter-medium;
+  }
+
+  @include media(">=large", "<huge") {
+    @include show-grid($columns-large);
+    border-left-width:$primary-container-gutter-large;
+    border-right-width:$primary-container-gutter-large;
+  }
+
+  @include media(">=huge") {
+    @include show-grid($columns-huge);
+    border-left-width:$primary-container-gutter-huge;
+    border-right-width:$primary-container-gutter-huge;
+  }
+}

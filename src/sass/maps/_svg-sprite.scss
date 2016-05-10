@@ -1,0 +1,146 @@
+
+
+%svg-common {
+	background: url(../img/sprite/sprite.svg) no-repeat;
+	
+	.no-svg & {
+		background-image: url(../img/sprite/sprite.png);
+	}
+}
+
+.sprite-icon-dropdown-arrow {
+	@extend %svg-common;
+
+	//background-position: -20px -40px;
+	background-position: -30px -50px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-dropdown-arrow-dims {
+	width: 10px;
+	height: 5px;
+}
+
+.sprite-icon-facebook {
+	@extend %svg-common;
+
+	//background-position: 0 -20px;
+	background-position: -10px -30px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-facebook-dims {
+	width: 10px;
+	height: 20px;
+}
+
+.sprite-icon-facebook-active {
+	@extend %svg-common;
+
+	//background-position: -10px -20px;
+	background-position: -20px -30px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-facebook-active-dims {
+	width: 10px;
+	height: 20px;
+}
+
+.sprite-icon-instagram {
+	@extend %svg-common;
+
+	//background-position: -20px -20px;
+	background-position: -30px -30px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-instagram-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.sprite-icon-instagram-active {
+	@extend %svg-common;
+
+	//background-position: -42px 0;
+	background-position: -52px -10px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-instagram-active-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.sprite-icon-linkedin {
+	@extend %svg-common;
+
+	//background-position: 0 0;
+	background-position: -10px -10px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-linkedin-dims {
+	width: 21px;
+	height: 20px;
+}
+
+.sprite-icon-linkedin-active {
+	@extend %svg-common;
+
+	//background-position: -21px 0;
+	background-position: -31px -10px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-linkedin-active-dims {
+	width: 21px;
+	height: 20px;
+}
+
+.sprite-icon-twitter {
+	@extend %svg-common;
+
+	//background-position: -42px -20px;
+	background-position: -52px -30px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-twitter-dims {
+	width: 20px;
+	height: 17px;
+}
+
+.sprite-icon-twitter-active {
+	@extend %svg-common;
+
+	//background-position: 0 -40px;
+	background-position: -10px -50px;
+	content : 0;
+	
+
+}
+
+.sprite-icon-twitter-active-dims {
+	width: 20px;
+	height: 17px;
+}
+
+
