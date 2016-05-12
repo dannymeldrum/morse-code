@@ -27,14 +27,17 @@ body {
   border-style: solid;
   border-top-width:0;
   border-bottom-width:0;
-  border-left-width:$primary-container-gutter-tiny;
-  border-right-width:$primary-container-gutter-tiny;
+  border-left-width:0;
+  border-right-width:0;
   @include container($primary-container-max-width);
 
+  margin-top: 20px;
+  @include media(">=small") {
     top: 50%;
     position: relative;
     height: 580px;
     margin-top: -290px;
+  }
 
 
   @include media(">=small", "<medium") {

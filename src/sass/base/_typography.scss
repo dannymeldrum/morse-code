@@ -12,13 +12,16 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $header-font-family;
-  line-height: $header-line-height;
-  margin: 0;
   font-weight: normal;
+  margin: 0 20px 10px 20px;
+
+  @include media(">medium") {
+    margin: 0 30px 10px 30px;
+  }
 }
 
 h1, .h1 {
-  @include rem-property(font-size, $h1-font-size);
+  @extend %large;
 }
 
 h2, .h2 {
@@ -41,8 +44,33 @@ h6, .h5 {
    @include rem-property(font-size, $h6-font-size);
 }
 
+%large {
+  @include rem-property(font-size, 46px);
+  line-height: 46/46*1;
+
+  @include media(">=small", "<medium") {
+    @include rem-property(font-size, 58px);
+    line-height: 58/58*1;
+  }
+
+  @include media(">=medium", "<large") {
+    @include rem-property(font-size, 70px);
+    line-height: 70/70*1;
+  }
+
+  @include media(">=large") {
+    @include rem-property(font-size, 82px);
+    line-height: 82/82*1;
+  }
+}
+
 p {
-  margin: 0 0 2.6em 0;
+  @include rem-property(font-size, 17px);
+  margin: 0 20px 2.6em 20px;
+
+  @include media(">medium") {
+    margin: 0 30px 2.6em 30px;
+  }
 }
 
 ul,
@@ -60,7 +88,7 @@ a {
   &:focus {
     color: $base-link-hover-color;
     outline:0;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 

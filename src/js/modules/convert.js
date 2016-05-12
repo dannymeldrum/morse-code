@@ -31,7 +31,7 @@ define(['jquery'], function($) {
 		    {"letter":'Y', 'morse':"-.--"},
 		    {"letter":'Z', 'morse':"--.."},
 		    {"letter":' ', 'morse':" "}
-	    ];	
+	    ];	    
 
 	return {
 

@@ -20,7 +20,7 @@ input,
 textarea,
 select {
 	width: 100%;
-	line-height: $base-line-height;
+	line-height: 1;
 	appearance: none;
 	outline:0;
 	padding: 12px;
@@ -28,15 +28,19 @@ select {
 	border:1px solid lightgrey;
 }
 textarea {
-	min-height: 100px;
+	@extend %large;
+	font-family: $header-font-family;
 	resize:vertical;
 	-webkit-overflow-scrolling: touch;
-	@include rem-property(font-size, $h1-font-size);
-	
-	padding: 0;
+	padding: 0px;
 	appearance: none;
 	border: none;
 	background: transparent;
+	margin-bottom: 60px;
+	@include media(">=small") {
+		min-height: 230px;
+		margin-bottom: 0px;
+	}
 }
 select {
 	@include svg-png-background("sprite-icon-dropdown-arrow");
@@ -78,19 +82,93 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 60px white inset;
 }
 
+
+
 // Placeholder text
 &::-webkit-input-placeholder {
-   @include rem-property(font-size, 14px);
+   
+  @include rem-property(font-size, 46px);
+  line-height: 46/46*1;
+
+  @include media(">=small", "<medium") {
+    @include rem-property(font-size, 58px);
+    line-height: 58/58*1;
+  }
+
+  @include media(">=medium", "<large") {
+    @include rem-property(font-size, 70px);
+    line-height: 70/70*1;
+  }
+
+  @include media(">=large") {
+    @include rem-property(font-size, 82px);
+    line-height: 82/82*1;
+  }
+   color: $grey-color;
 }
 &:-moz-placeholder {
-   @include rem-property(font-size, 14px);
+   
+  @include rem-property(font-size, 46px);
+  line-height: 46/46*1;
+
+  @include media(">=small", "<medium") {
+    @include rem-property(font-size, 58px);
+    line-height: 58/58*1;
+  }
+
+  @include media(">=medium", "<large") {
+    @include rem-property(font-size, 70px);
+    line-height: 70/70*1;
+  }
+
+  @include media(">=large") {
+    @include rem-property(font-size, 82px);
+    line-height: 82/82*1;
+  }
+   color: $grey-color;
 }
 &::-moz-placeholder {
-   @include rem-property(font-size, 14px);
+   
+  @include rem-property(font-size, 46px);
+  line-height: 46/46*1;
+
+  @include media(">=small", "<medium") {
+    @include rem-property(font-size, 58px);
+    line-height: 58/58*1;
+  }
+
+  @include media(">=medium", "<large") {
+    @include rem-property(font-size, 70px);
+    line-height: 70/70*1;
+  }
+
+  @include media(">=large") {
+    @include rem-property(font-size, 82px);
+    line-height: 82/82*1;
+  }
+   color: $grey-color;
 }
 &:-ms-input-placeholder {
    font-size:14px!important;
 }
 ::-ms-input-placeholder { /* Edge */
-    @include rem-property(font-size, 14px);
+    
+  @include rem-property(font-size, 46px);
+  line-height: 46/46*1;
+
+  @include media(">=small", "<medium") {
+    @include rem-property(font-size, 58px);
+    line-height: 58/58*1;
+  }
+
+  @include media(">=medium", "<large") {
+    @include rem-property(font-size, 70px);
+    line-height: 70/70*1;
+  }
+
+  @include media(">=large") {
+    @include rem-property(font-size, 82px);
+    line-height: 82/82*1;
+  }
+    color: $grey-color;
 }

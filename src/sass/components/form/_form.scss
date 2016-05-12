@@ -10,11 +10,19 @@
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
+	padding: 20px;
+
+	@include media(">medium") {
+		padding: 30px;
+	}
 
 	textarea {
+	    @include media(">=small", "<medium") {
+	        @include span(5 of $columns-small 0);
+	    }
 
 	    @include media(">=medium", "<large") {
-	        @include span(4.5 of $columns-medium 0);
+	        @include span(8 of $columns-medium 0);
 	    }
 
 	    @include media(">large") {
@@ -23,25 +31,56 @@
 	}
 }
 
+.form-actions {
+	margin: 0 20px;
+
+  @include media(">medium") {
+    margin: 0 30px;
+  }
+}
+
 
 .close {
 	position: absolute;
-	right: 32px; top: 32px;
-	width: 60px; height: 60px;
+	width: 60px; height: 41px;
 	opacity: 0.3;
 	text-indent: -2000em;
 	transition: all 0.4s ease 0s;
-
-	&:hover, &:focus {
-  		opacity: 1;
-	}
+	top: 100%; right: 50%;
+    margin: -50px -30px 0 0;
 
 	&:before, &:after {
 		content: '';
 		position: absolute;
-		left: 15px;
-		height: 60px; width: 2px;
+		right: 28px; top: -10px;
+		height: 41px; width: 2px;
 		background-color: $grey-color;
+	}
+
+    @include media(">=small") {
+		margin: 0;
+    }
+
+  	@include media(">=small", "<medium") {
+  		right: 16px; top: 29px;
+  		height: 41px;
+  		&:before, &:after { height: 60px; }
+  	}
+
+  	@include media(">=medium", "<large") {
+  		right: 25px; top: 41px;
+  		height: 48px;
+  		&:before, &:after { height: 69px; }
+  	}
+
+  	@include media(">=large") {
+		right: 14px; top: 42px;
+		height: 56px;
+  		&:before, &:after { height: 78px; }
+  	}
+
+	&:hover, &:focus {
+  		opacity: 1;
 	}
 	
 	&:before {
